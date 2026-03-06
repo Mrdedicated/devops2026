@@ -16,8 +16,8 @@ pipeline {
                             branches: [[name: '*/main']], 
                             extensions: [], 
                             userRemoteConfigs: [[
-                                credentialsId: 'jaintpharsha', 
-                                url: 'https://github.com/jaintpharsha/mern_3tire.git'
+                                credentialsId: 'Mrdedicated', 
+                                url: 'https://github.com/Mrdedicated/devops2026.git'
                             ]]
                         ])
                
