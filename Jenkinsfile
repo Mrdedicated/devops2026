@@ -1,7 +1,21 @@
 pipeline{
-    agent any
+    agent {
+        label 'slave1'
+    }
 
     stages{
+        stage('Checkout') {
+            steps {
+                checkout ([ $class: 'GitSCM',
+                            branches: [[name: '*/main']], 
+                            extensions: [], 
+                            userRemoteConfigs: [[
+                                credentialsId: 'Mrdedicated', 
+                                url: 'https://github.com/Mrdedicated/devops2026.git'
+                            ]]
+                        ])
+            }
+        }
         stage('Build1'){
             steps{
 
